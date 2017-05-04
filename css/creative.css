@@ -36,6 +36,9 @@ a {
   padding-bottom: 10px;
   background: #222;
 }
+.text-muted {
+  font-style: italic;
+}
 a:hover,
 a:focus {
   color: #19B5FE;
