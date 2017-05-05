@@ -40,10 +40,10 @@ a {
   line-height: 50px;
 }
 #tableau {
-  background: #333;
+  background: #666;
   padding: 50px;
 }
-p a {
+#banner p a {
   color: rgba(181, 181, 181, 0.7);
   font-family: sans-serif;
   font-weight: 400;
