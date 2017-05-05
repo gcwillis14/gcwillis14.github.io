@@ -333,6 +333,9 @@ header .header-content {
   padding: 100px 15px 100px;
   width: 100%;
 }
+.img-responsive {
+  padding: 1%
+}
 header .header-content .header-content-inner h1 {
   font-weight: 700;
   text-transform: uppercase;
