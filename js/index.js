@@ -1,5 +1,8 @@
 $(function(){
   $('#Container').on('mixLoad', function() {
+    load: {
+      sort: 'myorder:desc'
+    }
     console.log('[event-handler] MixItUp Loaded');
   });
 

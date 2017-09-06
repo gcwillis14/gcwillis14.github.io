@@ -3411,7 +3411,7 @@
          * @default     'default:asc'
          */
 
-        this.sort = 'default:asc';
+        this.sort = 'default:desc';
 
         /**
          * An array of objects representing the underlying data of any pre-rendered targets,
