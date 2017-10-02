@@ -51,6 +51,7 @@ a {
 #chicago {
   background: #666;
   padding-top: 50px;
+  margin: 0 auto;
 }
 #banner p a {
   color: rgba(181, 181, 181, 0.7);
@@ -143,6 +144,9 @@ img.img-responsive {
 }
 .fact-counter {
   background: #222;
+}
+.tableauPlaceholder {
+  margin: auto;
 }
 .fact-counter .count-outer {
   position: relative;
