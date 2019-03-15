@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8" />
-<title>data-exploration-home-credit-default-risk</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Maps, Infographics, Graphs and Data Vizualizations mostly of Rhode Island">
+<meta name="author" content="SmirkyGraphs">
+<title>SmirkyGraphs | Portfolio and Graphs</title>
+</head>
+
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/favico/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="../../img/favico/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../../img/favico/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="../../img/favico/manifest.json">
+<link rel="mask-icon" href="../../img/favico/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
 
 <style type="text/css">
     /*!
@@ -10426,7 +10442,7 @@ div#notebook {
   overflow-x: auto;
   width: 100%;
   /* This spaces the page away from the edge of the notebook area */
-  padding-top: 60px;
+  padding-top: 20px;
   margin: 0px;
   outline: none;
   box-sizing: border-box;
@@ -11727,47 +11743,24 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+  padding-top: 60px;
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
-
-<!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
-
-<!-- Loading mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-</script>
-
 <!-- Bootstrap Core CSS -->
 <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -11815,6 +11808,31 @@ div#notebook {
     <!-- /.container-fluid -->
 </nav>
 
+<!-- Custom stylesheet, it must be in the same directory as the html file -->
+<link rel="stylesheet" href="custom.css">
+
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
@@ -11854,36 +11872,48 @@ div#notebook {
 <li><a href="#viz1">Visualizations</a></li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><a href="#bureau-bal">Bureau Balance</a><ul>
 <li><a href="#basic2">Basic Info</a></li>
 <li><a href="#missing2">Missing Values</a></li>
 <li><a href="#viz2">Visualizations</a></li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><a href="#bureau">Bureau</a><ul>
 <li><a href="#basic3">Basic Info</a></li>
 <li><a href="#missing3">Missing Values</a></li>
 <li><a href="#viz3">Visualizations</a></li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><a href="#ccbal">Credit Card Balance</a><ul>
 <li><a href="#basic4">Basic Info</a></li>
 <li><a href="#missing4">Missing Values</a></li>
 <li><a href="#viz4">Visualizations</a></li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><a href="#install">Installments Payments</a><ul>
 <li><a href="#basic5">Basic Info</a></li>
 <li><a href="#missing5">Missing Values</a></li>
 <li><a href="#viz5">Visualizations</a></li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><a href="#pos">POS CASH Balance</a><ul>
 <li><a href="#basic6">Basic Info</a></li>
 <li><a href="#missing6">Missing Values</a></li>
 <li><a href="#viz6">Visualizations</a></li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><a href="#prev">Previous Application</a><ul>
 <li><a href="#basic7">Basic Info</a></li>
 <li><a href="#missing7">Missing Values</a></li>
@@ -11891,6 +11921,7 @@ div#notebook {
 </ul>
 </li>
 </ul>
+<p>3) <a href="https://smirkygraphs.github.io/portfolio/python-notebooks/home-credit-default-predictions">Predictions</a></p>
 
 </div>
 </div>
@@ -12008,7 +12039,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<section id="data"></section><p><hr></p>
+<section id="data"></section><hr>
+
 <h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="#Data-Exploration">&#182;</a></h2>
 </div>
 </div>
@@ -13701,8 +13733,21 @@ memory usage: 286.2+ MB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<section id="bureau-bal"></section><p><hr></p>
-<h3 id="Bureau-Balance">Bureau Balance<a class="anchor-link" href="#Bureau-Balance">&#182;</a></h3>
+<section id="bureau-bal"></section><hr>
+
+<h2 id="Bureau-Balance">Bureau Balance<a class="anchor-link" href="#Bureau-Balance">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Monthly balances of previous credits in Credit Bureau.</p>
+<p>This table has one row for each month of history of every previous credit reported to Credit Bureau
+i.e the table has</p>
+<p>(#loans in sample <em> # of relative previous credits </em> # of months where we have some history observable for the previous credits) rows.</p>
+
 </div>
 </div>
 </div>
@@ -13987,8 +14032,9 @@ memory usage: 624.8+ MB
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><section id=bureau></section></p>
-<p><hr></p>
-<h3 id="Bureau">Bureau<a class="anchor-link" href="#Bureau">&#182;</a></h3>
+<hr>
+
+<h2 id="Bureau">Bureau<a class="anchor-link" href="#Bureau">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14516,8 +14562,9 @@ memory usage: 222.6+ MB
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><section id=ccbal></section></p>
-<p><hr></p>
-<h3 id="Credit-Card-Balance">Credit Card Balance<a class="anchor-link" href="#Credit-Card-Balance">&#182;</a></h3>
+<hr>
+
+<h2 id="Credit-Card-Balance">Credit Card Balance<a class="anchor-link" href="#Credit-Card-Balance">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14526,7 +14573,8 @@ memory usage: 222.6+ MB
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Monthly balance snapshots of previous credit cards that the applicant has with Home Credit.</p>
-<p>This table has one row for each month of history of every previous credit in Home Credit (consumer credit and cash loans) related to loans in our sample – i.e. the table has (#loans in sample <em> # of relative previous credit cards </em> # of months where we have some history observable for the previous credit card) rows.</p>
+<p>This table has one row for each month of history of every previous credit in Home Credit (consumer credit and cash loans) related to loans in our sample</p>
+<p>(#loans in sample <em> # of relative previous credit cards </em> # of months where we have some history observable for the previous credit card) rows.</p>
 
 </div>
 </div>
@@ -15013,8 +15061,20 @@ memory usage: 673.9+ MB
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><section id=install></section></p>
-<p><hr></p>
-<h3 id="Installments-Payments">Installments Payments<a class="anchor-link" href="#Installments-Payments">&#182;</a></h3>
+<hr>
+
+<h2 id="Installments-Payments">Installments Payments<a class="anchor-link" href="#Installments-Payments">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Repayment history for the previously disbursed credits in Home Credit related to the loans in our sample.</p>
+<p>There is a) one row for every payment that was made plus b) one row each for missed payment.</p>
+<p>One row is equivalent to one payment of one installment OR one installment corresponding to one payment of one previous Home Credit credit related to loans in our sample.</p>
+
 </div>
 </div>
 </div>
@@ -15348,8 +15408,20 @@ memory usage: 830.4 MB
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><section id=pos></section></p>
-<p><hr></p>
-<h3 id="POS-CASH-Balance">POS CASH Balance<a class="anchor-link" href="#POS-CASH-Balance">&#182;</a></h3>
+<hr>
+
+<h2 id="POS-CASH-Balance">POS CASH Balance<a class="anchor-link" href="#POS-CASH-Balance">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Monthly balance snapshots of previous POS (point of sales) and cash loans that the applicant had with Home Credit.</p>
+<p>This table has one row for each month of history of every previous credit in Home Credit (consumer credit and cash loans) related to loans in our sample</p>
+<p>(#loans in sample <em> # of relative previous credits </em> # of months in which we have some history observable for the previous credits) rows.</p>
+
 </div>
 </div>
 </div>
@@ -15766,8 +15838,19 @@ memory usage: 610.4+ MB
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><section id=prev></section></p>
-<p><hr></p>
-<h3 id="Previous-Application">Previous Application<a class="anchor-link" href="#Previous-Application">&#182;</a></h3>
+<hr>
+
+<h2 id="Previous-Application">Previous Application<a class="anchor-link" href="#Previous-Application">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>All previous applications for Home Credit loans of clients who have loans in our sample.</p>
+<p>There is one row for each previous application related to loans in our data sample.</p>
+
 </div>
 </div>
 </div>
@@ -16563,6 +16646,60 @@ memory usage: 471.5+ MB
     </div>
   </div>
 </body>
+
+<footer>
+  <!-- MixitUP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.js"></script>
+  <script src="../../js/index.js"></script>
+  <script src="../../js/mixitup.min.js"></script>
+
+  <!-- jQuery -->
+  <!--<script src="../vendor/jquery/jquery.min.js"></script>-->
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="../../vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="../../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Theme JavaScript -->
+  <script src="../../js/creative.min.js"></script>
+
+  <script>
+  function init() {
+  var imgDefer = document.getElementsByTagName('img');
+  for (var i=0; i<imgDefer.length; i++) {
+  if(imgDefer[i].getAttribute('data-src')) {
+  imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+  } } }
+  window.onload = init;
+  </script>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-106762433-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- End Google Analytics Code -->
+
+
+
+
+</footer>
 
  
 
