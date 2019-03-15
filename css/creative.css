@@ -145,14 +145,9 @@ img.img-responsive {
 .fact-counter {
   background: #222;
 }
-
 .tableauPlaceholder {
   margin: auto;
 }
-.tab-toolbar {
-  visibility: hidden !important;
-}
-
 .fact-counter .count-outer {
   position: relative;
   font-size: 36px;
@@ -635,8 +630,4 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #222222;
-}
-#toolbar-container {
-  visibility: hidden !important;
-  color: #000 !important;
 }
