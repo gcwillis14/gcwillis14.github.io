@@ -8,6 +8,18 @@
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<!-- Plugin CSS -->
+<link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+<!-- Theme CSS -->
+<link href="../css/creative.css" rel="stylesheet">
 
 <meta name="author" content="George WIllis" />
 
@@ -386,14 +398,14 @@ sapply(files, function(x){
   Year &lt;- str_extract(x, &quot;[0-9]{4}&quot;) #Title
   # Load image as raster
   im &lt;- raster::raster(x)
-  # Transform to df 
+  # Transform to df
   NTL_df &lt;- as.data.frame(im, xy=T)             # Creating a df
   colnames(NTL_df) &lt;- c(&quot;x&quot;, &quot;y&quot;, &quot;NTL&quot;)
   NTL_df[NTL_df == 0] &lt;- NA #remove 0 for efficiency
   NTL_df &lt;- na.omit(NTL_df)
-  
+
   gg_NTL &lt;- NTL_df %&gt;%
-  ggplot() + 
+  ggplot() +
   geom_raster(aes(x = x, y = y, fill = NTL)) + #raster
   scale_fill_gradientn(colours = mycols, trans=&quot;log&quot;, name=&quot;Nightime lights&quot;)+ #colour scale
   borders(&quot;world&quot;, &quot;China&quot;, colour = &quot;grey&quot;, size=0.1) + #China border
@@ -404,19 +416,19 @@ sapply(files, function(x){
     legend.key.width = unit(0.1,&quot;cm&quot;),
     legend.title=element_text(color=&quot;white&quot;, size=4),
     text = element_text(color = &quot;white&quot;, size = 4),
-    plot.background = element_rect(fill = &quot;black&quot;, color = NA), 
-    panel.background = element_rect(fill = &quot;black&quot;, color = NA), 
+    plot.background = element_rect(fill = &quot;black&quot;, color = NA),
+    panel.background = element_rect(fill = &quot;black&quot;, color = NA),
     legend.background = element_rect(fill = &quot;black&quot;, color = NA),
     plot.title = element_text(size= 13, hjust=0.1, color = &quot;white&quot;, margin = margin(b = -0.1, t = 0.4, l = 2, unit = &quot;cm&quot;)),
-    panel.grid.major = element_blank(), 
+    panel.grid.major = element_blank(),
     panel.grid.minor = element_blank()
   ) +
   coord_quickmap()
-  
+
   # Save plot
   ggsave(paste0(im_name, &quot;.png&quot;),
          dpi = 300)
-  
+
 })</code></pre>
 <p>And finally we laod all created Figs, and combine using the Magick
 package. We can then animate as shown below.</p>
